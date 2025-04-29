@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            border-left: 7px solid;
+            background-color: #e7dfd8;
+            overflow-x: hidden;
+        }
+
+        .sidenav a {
+            text-decoration: none;
+            color: black;
+            padding: 16px;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            background-color: black;
+            color: white
+        }
+
+        .sidebody {
+            margin-left: 200px;
+            padding-left: 20px;
+        }
+
+        body {
+            background-color: #e7dfd8;
+        }
+
+        .body {
+            margin-left: 200px;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="body">
+        <div class="title">
+            <h1>Bugasan ni Mayang </h1>
+        </div>
+    </div>
+
+    <div class="sidenav">
+        <a href="sidebody" onclick="loadCustomers()">Customer</a>
+        <a href="#" onclick="loadInventory()">Inventory</a>
+        <a href="#" onclick="loadSuppliers()">Supplier</a>
+        <a href="#" onclick="loadReports()">Reports</a>
+        <a href="#" onclick="Delivery()"> Delivery </a>
+    </div>
+
+    <div class="sidebody">
+        <!-- Content will be loaded here -->
+    </div>
+
+    <script>
+        // Function to load Customer content
+        function loadCustomers(customerid) {
+            const sidenav = document.getElementById(customerid);
+            sidenav.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        // Function to load Inventory content
+        function loadInventory() {
+            const sidebody = document.querySelector('.sidebody');
+            sidebody.innerHTML = `
+                <div>
+                    <h2> Products </h2>
+                <div>
+                
+                
+
+            `;
+        }
+
+        // Function to load Supplier content
+        function loadSuppliers() {
+            const sidebody = document.querySelector('.sidebody');
+            sidebody.innerHTML = `
+                <h2>Supplier Section</h2>
+                <ul>
+                    <li>Supplier A</li>
+                    <li>Supplier B</li>
+                    <li>Supplier C</li>
+                </ul>
+            `;
+        }
+
+        // Function to load Reports content
+        function loadReports() {
+            const sidebody = document.querySelector('.sidebody');
+            sidebody.innerHTML = `
+                <h2>Reports Section</h2>
+                <p>Reports content goes here.</p>
+            `;
+        }
+
+        function Delivery() {
+            const sidebody = DocumentType,querySelector('.sidebody');
+            sidebody.innerHTML = `
+                
+            
+            `;
+        }
+        
+    </script>
+</body>
+</html>

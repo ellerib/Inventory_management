@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar.left {
+    order: 1;
+}
+
+.main-content {
+    width: 60%;
+    padding: 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    order: 2;
+}
+
+.sidebar.right {
+    order: 3;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
