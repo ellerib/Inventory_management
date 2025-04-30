@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .sidenav {
-            height: 100%;
-            width: 200px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            border-left: 7px solid;
-            background-color: #e7dfd8;
-            overflow-x: hidden;
-        }
-
-        .sidenav a {
-            text-decoration: none;
-            color: black;
-            padding: 16px;
-            display: block;
-        }
-
-        .sidenav a:hover {
-            background-color: black;
-            color: white
-        }
-
-        .sidebody {
-            margin-left: 200px;
-            padding-left: 20px;
-        }
-
-        body {
-            background-color: #e7dfd8;
-        }
-
-        .body {
-            margin-left: 200px;
-        }
-
-        .title {
-            text-align: center;
-        }
-
-    </style>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title> Bugasan ni Mayang </title>
+    <link rel="stylesheet" href="invenmanadesign.css">
 </head>
 <body>
-    <div class="body">
+    <!-- <div class="body">
         <div class="title">
             <h1>Bugasan ni Mayang </h1>
         </div>
-    </div>
+    </div> -->
+
+
+    <!-- <div class="sidenav">
+        <table>
+            <tr>
+                <th> Customer </th>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="#" onclick="loadCustomers()">Customer</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="#" onclick="loadInventory()">Inventory</a>
+                </td>
+            </tr>
+               
+            <tr>
+                <td>
+                    <a href="#" onclick="loadSuppliers()">Supplier</a>
+                </td>
+            </tr>
+
+            <tr>    
+                <td>
+                    <a href="#" onclick="loadReports()">Reports</a>
+                </td>
+            </tr>
+                
+            <tr>
+                <td>
+                    <a href="#" onclick="Delivery()"> Delivery </a>
+                </td>
+            </tr>
+                
+        </table>
+    </div> -->
 
     <div class="sidenav">
-        <a href="sidebody" onclick="loadCustomers()">Customer</a>
+        <a href="#" onclick="loadCustomers()">Customer</a>
         <a href="#" onclick="loadInventory()">Inventory</a>
         <a href="#" onclick="loadSuppliers()">Supplier</a>
         <a href="#" onclick="loadReports()">Reports</a>
@@ -65,30 +62,57 @@
     </div>
 
     <div class="sidebody">
-        <!-- Content will be loaded here -->
+       <!-- Second panel -->
+    </div>
+
+    <div class="sidepanel">
+        <!-- Third panel -->
     </div>
 
     <script>
         // Function to load Customer content
-        function loadCustomers(customerid) {
-            const sidenav = document.getElementById(customerid);
-            sidenav.scrollIntoView({
-                behavior: "smooth"
-            });
+        function loadCustomers() {
+            const sidebody = document.querySelector('.sidebody');
+            sidebody.innerHTML = `
+                <div>
+                    <h2> sample </h2>
+                </div>
+            `;
         }
 
         // Function to load Inventory content
         function loadInventory() {
             const sidebody = document.querySelector('.sidebody');
             sidebody.innerHTML = `
-                <div>
-                    <h2> Products </h2>
-                <div>
+                 <h2> Products </h2>
+                <a href="#" onclick="kilo()"> Maharlika </a>
+                <a href="#" onclick="kilo()"> Dona Maria </a>
+                <a href="#" onclick="kilo()"> Harvesters </a>
+                <a href="#" onclick="kilo()"> Lion Ivory </a>
+                <a href="#" onclick="kilo()"> Base Gold </a>
+                <a href="#" onclick="kilo()"> Dinorado </a>
+                <a href="#" onclick="kilo()"> Sinadomeng </a>
+                <a href="#" onclick="kilo()"> Jasmine</a>
+        
                 
-                
+            `;
+        }
+
+        function kilo(){
+            const sidepanel = document.querySelector('.sidepanel');
+            sidepanel.innerHTML = `
+                 <div class="kilo">
+                     <a href="#"> 1 KG</a>
+                    <a href="#"> 5 KG</a>
+                    <a href="#"> 10 KG</a>
+                    <a href="#"> 15 KG</a>
+                </div>
+
 
             `;
         }
+
+        
 
         // Function to load Supplier content
         function loadSuppliers() {
@@ -113,13 +137,13 @@
         }
 
         function Delivery() {
-            const sidebody = DocumentType,querySelector('.sidebody');
+            const sidebody = document.querySelector('.sidebody');
             sidebody.innerHTML = `
-                
-            
-            `;
-        }
-        
+                <h2>Delivery Section</h2>
+            <p>Delivery content goes here.</p>
+        `;
+    }
     </script>
+    
 </body>
 </html>
