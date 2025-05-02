@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Bugasan ni Mayang </title>
-    <link rel="stylesheet" href="invenmanadesign.css">
+    <!-- <link rel="stylesheet" href="invenmanadesign.css"> -->
 </head>
 <body>
-    <!-- <div class="body">
+    <!-- 
+        TITLE HEADER BUT STILL WORKING ON IT
+    <div class="body">
         <div class="title">
             <h1>Bugasan ni Mayang </h1>
         </div>
@@ -54,6 +56,7 @@
     </div> -->
 
     <div class="sidenav">
+        <!-- FIRST PANEL -->
         <a href="#" onclick="loadCustomers()">Customer</a>
         <a href="#" onclick="loadInventory()">Inventory</a>
         <a href="#" onclick="loadSuppliers()">Supplier</a>
@@ -62,11 +65,11 @@
     </div>
 
     <div class="sidebody">
-       <!-- Second panel -->
+       <!-- SECOND PANEL -->
     </div>
 
     <div class="sidepanel">
-        <!-- Third panel -->
+        <!-- THIRD PANEL -->
     </div>
 
     <script>
@@ -93,8 +96,6 @@
                 <a href="#" onclick="kilo()"> Dinorado </a>
                 <a href="#" onclick="kilo()"> Sinadomeng </a>
                 <a href="#" onclick="kilo()"> Jasmine</a>
-        
-                
             `;
         }
 
@@ -107,23 +108,16 @@
                     <a href="#"> 10 KG</a>
                     <a href="#"> 15 KG</a>
                 </div>
-
-
             `;
         }
 
-        
-
+    
         // Function to load Supplier content
         function loadSuppliers() {
             const sidebody = document.querySelector('.sidebody');
             sidebody.innerHTML = `
-                <h2>Supplier Section</h2>
-                <ul>
-                    <li>Supplier A</li>
-                    <li>Supplier B</li>
-                    <li>Supplier C</li>
-                </ul>
+                <h2> Company </h2>
+                
             `;
         }
 
